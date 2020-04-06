@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="widht=device-widht,initial-scale=1">
+	<title>进度条</title>
+	<link rel="stylesheet" type="text/css" href="css/1.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<!--线性进度-->
+<div class="progress">
+    <div class="progress-bar progress-bar-striped active">
+        <div class="progress-value">0%</div>
+    </div>
+</div>
+</body>
+<script>
+    var a = 0,
+        timer = setInterval(function () {
+            a++ //10-11秒 a+=10=>1-2秒
+            $(".progress-value").html(a + "%");
+            $(".progress-bar").width(a + "%");
+            if (a == 80) {
+                clearInterval(timer);//清除定时器
+                $(".progress-bar").removeClass("active");
+                location.href = "";//跳转链接
+            }
+        }, 100);
+</script>
+</html>
