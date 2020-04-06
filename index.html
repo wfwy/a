@@ -8,139 +8,63 @@
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
-<body>
-	<nav class="navbar navbar-fixed-top navbar-inverse">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#info">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a href="" class="navbar-brand">后台管理</a>
-			</div>
-			<div id="info" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown">
-						<a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;管理员<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="">个人信息</a></li>
-							<li class="divider"></li>
-							<li><a href="">修改</a></li>
-							<li class="divider"></li>
-							<li><a href="">退出</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-<div class="container-fluid" style="margin-top: 50px">
-	<div class="row col-xs-2">
-		<nav class="row navbar navbar-default">
-			<ul class="nav">
-				<li>
-					<a class="col-xs-offset-1" href="index.html" class="text-muted"><i class="glyphicon glyphicon-home"></i>&nbsp;&nbsp;首页</a>
-				</li>
-				<li>
-					<a class="col-xs-offset-1" href="config.html" ><i class="glyphicon glyphicon-cog"></i>&nbsp;&nbsp;网站配置</a>
-				</li>
-				<li>
-					<a class="col-xs-offset-1" href="" ><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;管理员</a>
-				</li>
-				<li>
-					<a class="col-xs-offset-1" href="" ><i class="glyphicon glyphicon-shopping-cart"></i>&nbsp;&nbsp;商品列表</a>
-				</li>
-				<li>
-					<a class="col-xs-offset-1" href="" ><i class="glyphicon glyphicon-list"></i>&nbsp;&nbsp;用户列表</a>
-				</li>
-			</ul>
-		</nav>
-	</div>
-	<div class="col-xs-10">
-		<div class="container-fluid">
-			<ol class="breadcrumb">
-				<li><a href="index.html">首页</a></li>
-				<li class="active">详情</li>
-			</ol>
-		</div>
-		<div class="container-fluid">
-			<div class="col-xs-9">
-				<div class="col-xs-6">
-					<ul class="list-group">
-					  <li class="list-group-item">
-					    <span class="badge">14</span>今日新增
-					  </li>
-					   <li class="list-group-item">
-					    <span class="badge">100</span>7日新增
-					  </li>
-					   <li class="list-group-item">
-					    <span class="badge">766</span>本月新增
-					  </li>
-					</ul>
-				</div>
-                <div class="col-xs-6">
-					<ul class="list-group">
-					  <li class="list-group-item">
-					    <span class="badge">5</span>未处理
-					  </li>
-					  <li class="list-group-item">
-					    <span class="badge">666</span>已处理
-					  </li>
-					  <li class="list-group-item">
-					    <span class="badge">671</span>总订单
-					  </li>
-					</ul>
-				</div>
-				<div class="h5">公告（通知）</div>
-				<div class="panel-group">
-					<div class="panel panel-warning">
-						<div class="panel panel-heading">
-							<h4 class="panel-title">
-								<a class="collapsed" data-toggle="collapse" href="#not1">wfwy</a>
-							</h4>
-						</div>
-						<div id="not1" class="panel-collapse collapse">
-							<div class="panel-footer">
-								545a6f4d56a4fd6
-							</div>
-						</div>
+<body style="background-color:#999" >
+	<div class="text-center" style="padding-top: 150px">
+		<div class="" style="width: 500px;margin: 0 auto;background-color: #fff;border-radius: 40px">
+			<div class="" style="padding: 50px">
+				<div class="" style="width: 300px;margin: 0 auto">		
+					<h3 style="padding-bottom: 20px">后台管理</h3>
+					<div class="form-group">
+						<input type="text" id="account" class="form-control" placeholder="请输入账号">
 					</div>
-					<div class="panel panel-warning">
-						<div class="panel panel-heading">
-							<h4 class="panel-title">
-								<a class="collapsed" data-toggle="collapse" href="#not2">wxwwzwd</a>
-							</h4>
-						</div>
-						<div id="not2" class="panel-collapse collapse">
-							<div class="panel-footer">
-								545a6f4d56a4fd6
+					<div class="form-group">
+						<input type="text" id="password" class="form-control" placeholder="请输入密码">
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" id="checkbox">记住我
+						</label>
+					</div>
+					<button class="btn btn-success" type="submit" id="submit">登录</button>
+				</div>
+				<div id="error" class="modal fade">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-hrader">
+								<h5 id="error-title">登陆失败请重试！</h5>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-3">
-				<table class="table table-striped">
-					<caption >服务器状态</caption>
-				<tbody>
-					<tr>
-						<td>状态</td>
-						<td>正常</td>
-					</tr>
-					<tr>
-						<td>系统</td>
-						<td>win10</td>
-					</tr>
-					<tr>
-						<td>位数</td>
-						<td>x64</td>
-					</tr>
-				</tbody>
-				</table>
-			</div>
 		</div>
 	</div>
-</div>
+	<footer class="navbar-fixed-bottom">
+		<p class="text-center">Copyright @ 2019.wfwy All Rightes Reserved </p>
+	</footer>
 </body>
+<script type="text/javascript">
+	$("#submit").click(function(){
+		var account=$("#account").val();
+		if (!account) {
+			$("#error-title").text('账号不能为空！');
+			$("#error").modal('show');
+			setTimeout(function(){
+				$("#error").modal('hide');
+			},1200);
+			return false;
+		}
+		var password=$("#password").val();
+		if (!password) {
+			$("#error-title").text('密码不能为空！');
+			$("#error").modal('show');
+			setTimeout(function(){
+				$("#error").modal('hide');
+			},1200);
+			return false;
+		}
+		location.href='main.html';
+	})
+</script>
 </html>
+
